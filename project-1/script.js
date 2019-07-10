@@ -46,7 +46,7 @@ var eventImg = document.querySelector("#eventimg");
 var bossHp = 50;
 var bossHpHtml = document.getElementById("bossHp");
 var bossDef = 5;
-var bossAtk = 50;
+var bossAtk = 20;
 //startGame function to begin the fight event
 var startGame = function (currentInput){
     atkbutton.disabled = true;
@@ -62,9 +62,15 @@ var startGame = function (currentInput){
         var countdownTimer = (Math.floor(Math.random() * 5)+1) * 1000;
         move(countdownTimer/100)
         var isPlayerTurn = Boolean(Math.floor(Math.random() * 2));
+        var popupText = document.querySelector('#popup');
+        var popupHTML = document.getElementById("popup");
         if(isPlayerTurn) {
             hero.src="https://media.giphy.com/media/WrBSHRLE9gEgM/giphy.gif"
             eventImg.src="https://media.giphy.com/media/2WGYAQZ52I6wQecREk/giphy.gif"
+            // console.log(popupText);
+            popupHTML.style.display = "block";
+            popupText.innerHTML = ("ATTACK! <br />" + (countdownTimer/1000) + " SECS!");
+            // console.log(popupText);
             // console.log("ATTACK NOW! You got " + (countdownTimer/1000) + " seconds!")
             // display("ATTACK NOW! You got " + (countdownTimer/1000) + " seconds!")
             atkbutton.disabled = false;
@@ -72,6 +78,10 @@ var startGame = function (currentInput){
         } else {
             eventImg.src="https://media.giphy.com/media/X7Z4lDnPqcF0dyY2dX/giphy.gif"
             hero.src="https://media.giphy.com/media/dGQinrFi3BDIQ/giphy.gif"
+            // console.log(popupText);
+            popupHTML.style.display = "block";
+            popupText.innerHTML = ("DEFEND! <br />" + (countdownTimer/1000) + " SECS!");
+            // console.log(popupText);
             // console.log("def now! you got " + (countdownTimer/1000) + " seconds!")
             // display("DEFEND NOW! You got " + (countdownTimer/1000) + " seconds!")
             atkbutton.disabled = true;
@@ -96,6 +106,7 @@ var startGame = function (currentInput){
                     console.log("player atks boss for " + dmgToBoss + " hp. boss left " + bossHp + " HP");
                     displayBossEvent("Player damaged Boss for " + dmgToBoss + " HP. Boss left " + bossHp + " HP");
                     atkbutton.disabled=true;
+                    popupHTML.style.display = "none";
 
                 } else {
                     var dmgToPlayer = bossAtk - countDef;
@@ -114,6 +125,7 @@ var startGame = function (currentInput){
                     console.log("boss atks player for " + dmgToPlayer + " hp. player left " + charHp + " HP");
                     displayPlayerEvent("Boss damaged player for " + dmgToPlayer + " HP. player left " + charHp + " HP");
                     dfbutton.disabled=true;
+                    popupHTML.style.display = "none";
                 }
                 isPlayerTurn = !isPlayerTurn;
                 console.log("bosshp = " + bossHp + " : " + "charHp = " + charHp)

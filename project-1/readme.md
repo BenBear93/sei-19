@@ -1,3 +1,15 @@
+Low Wei De Project 1 - Marvel clicking game 
+Technologies used during this project were Sublime text editor, Bootstrap, Fontawesome.com (for special font or icon), iframe(to activate autoplay function for music in Google Chrome Browser) and Google Fonts. 
+
+Approach taken - First, I decide on which nature of game I would like to build. I then sketch out the minimal viable product(MVP) of the project. Thereafter, I begun to go through the thought process in terms of functions required for the project. I pseudo coded the functions so as to determine which variables (global & local) would be required. Thereafter, I would sketch out the design and layouts of my project so that I could start to plan for the CSS. Finally, i would write out some codes and the layouts before proceeding to code on Sublime editor. 
+
+I started from building the basic functions so that the code would work and expanded my project from there.
+I also saved copies of my project so in the case that my code would break, i would have a previous version to fall back on. Also, as i had already laid out the basic functions of my code and expanded from the ground work, it is easier for me to debug any issues. 
+
+Installation instructions - linking of bootstrap, Google Fonts and awesomefonts. 
+
+Unsolved problems - I had yet to expand further on the game due to time limitations and also my knowledge limitations. I would continue to research and try to expand on my game. Future further expansion could be to add more enemies, selection of different heroes with different stats, items or allies available for player. Also, different mini games could be included to initialise different skills or animations. Background music is working but had yet to implement different sound for actions or events that happened. 
+
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: The Game
 
 ### Overview
@@ -71,3 +83,4 @@ Given __Bloom's Taxonomy__ students should be able to apply their knowledge of H
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** _(a great reference for all things Vanilla Javascript)_
 * **[jQuery Docs](http://api.jquery.com)** _(if you're using jQuery)_
 * **[Github Pages](https://pages.github.com)** _(for hosting your game)_
+
