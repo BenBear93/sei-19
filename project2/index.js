@@ -232,7 +232,8 @@ app.get('/', (request, response)=>{
  // * Listen to requests on port 3000
  // * ===================================
  // */
-const server = app.listen(3000, () => console.log('Tuning into 3000'));
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => console.log('Tuning into port ' + PORT));
 
 let onClose = function() {
 
